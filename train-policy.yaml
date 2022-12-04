@@ -1,0 +1,35 @@
+apiVersion: run.ai/v2alpha1
+kind: TrainingPolicy
+metadata:
+  name: train-policy1
+  namespace: runai-ofekh
+spec:
+  name:
+    rules:
+      required: true
+  gpu:
+    rules:
+      required: true
+      min: "0"  #
+      max: "2"
+    value: "0"
+  requestedCpu:
+    rules:
+      required: true
+      min: "0"  #
+      max: "4"
+    value: "0"
+  cpuLimit:
+    rules:
+      required: true
+      min: "0"  #
+      max: "4"
+    value: "0"
+  migProfile:
+    rules:
+      required: true
+      canEdit: false
+  pvcs:
+    rules:
+      canAdd: false
+
